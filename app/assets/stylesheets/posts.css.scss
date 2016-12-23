@@ -1,0 +1,56 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.posts {
+	.nav-wrapper {
+		padding-right: 20px;
+		padding-left: 10px;
+	}
+
+	.icon { max-height: 20px; }
+
+	.jumbo{ 
+		padding: 20px 0 20px 0;
+		width: 70%;
+		text-align: center;
+		margin: 2% auto 0;
+	}
+
+		#blog-name{ 
+			display: inline-block;
+		}
+
+	.row {
+		border-right: 0.5px solid lightgrey;
+		border-left: 0.5px solid lightgrey;
+	}
+
+	#post-box {
+		border-radius: 5px;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+	}
+
+	.us-image {
+		max-width: 100%;
+		transform:rotate(180deg);
+		-ms-transform:rotate(180deg); 
+		-webkit-transform:rotate(180deg);
+	}
+
+	.post-image {
+		max-width: 80%;
+		max-height: 600px;
+	}
+
+	#post {
+		width: 70%;
+		margin: 0px auto;
+	}
+
+	.left {
+		margin-left: 10%;
+	}
+
+}
