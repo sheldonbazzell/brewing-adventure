@@ -1,1 +1,1 @@
-This is a lifestyle blog for my wife and I. It's written in Ruby on Rails.
+This is a lifestyle blog for my wife and I. It's written in Ruby on Rails. Check us out at http://www.brewingadventure.com.
