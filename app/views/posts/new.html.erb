@@ -19,8 +19,9 @@
 		<h1>Tell.</h1>
 	</div>
 	<div class="row">
-    <form class="col s12" action="/posts" method="post" enctype="multipart/form-data" >
-	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <form class="col s12" action="/posts" method="post" enctype="multipart/form-data" >
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="hidden" name="post[user_id]" value="<%= current_user.id %>">
       <div class="row">
         <div class="input-field col s6">
           <input id="title" name="post[title]" type="text" class="validate">

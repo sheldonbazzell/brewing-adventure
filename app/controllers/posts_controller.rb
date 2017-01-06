@@ -6,18 +6,19 @@ class PostsController < ApplicationController
   def new
   end
 
-  def edit
-  end
-
   def create
-  	@post = Post.create( post_params )
-    @image = Image.create( avatar:params[:post][:avatar], post:@post )
-  	redirect_to '/posts'
+    if current_user.admin
+      post = Post.create( post_params )
+      image = Image.create( avatar:params[:post][:avatar], post:post )
+      redirect_to '/posts'
+    else
+      redirect_to '/posts/new'
+    end
   end
 
   private
   def post_params
-  	params.require(:post).permit(:title, :content)
+  	params.require(:post).permit(:title, :content, :user_id)
   end
 
 end
