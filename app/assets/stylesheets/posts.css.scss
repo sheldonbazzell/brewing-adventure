@@ -8,17 +8,35 @@ body.posts {
 		padding-left: 10px;
 	}
 
-	.icon { max-height: 20px; }
+	.right {
+		height: 64px;
+	}
+
+	.logo {
+		margin-left: 10%;
+		margin-top: 30%;
+		width: 100px;
+	}
+
+	.icon { 
+		max-height: 20px;
+		margin-top: 25px;
+	}
 
 	.jumbo{ 
-		padding: 20px 0 20px 0;
-		width: 70%;
+		padding: 5px 0 15px 0;
+		width: 50%;
 		text-align: center;
 		margin: 2% auto 0;
 	}
 
+		.arrow {
+			height: 60px;
+			width: 700px;
+		}
 		#blog-name{ 
 			display: inline-block;
+			margin-bottom: 0;
 		}
 
 	.row {
@@ -34,9 +52,6 @@ body.posts {
 
 	.us-image {
 		max-width: 100%;
-		transform:rotate(180deg);
-		-ms-transform:rotate(180deg); 
-		-webkit-transform:rotate(180deg);
 	}
 
 	.post-image {

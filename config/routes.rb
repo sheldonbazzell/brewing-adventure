@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  get 'about/index'
+
   root 'posts#index'
+  get 'about' => 'about#index'
   get 'posts' => 'posts#index'
   get 'posts/new'
   get 'posts/edit'
   get 'users/new' => 'users#new'
-  get 'sessions/new' => 'sessions#new'
+  get 'admin' => 'sessions#new'
   get 'sessions/destroy' => 'sessions#destroy'
+  post 'sessions' => 'sessions#create'
   post 'posts' => 'posts#create'
   post 'images' => 'images#create'
   post 'users' => 'users#create'

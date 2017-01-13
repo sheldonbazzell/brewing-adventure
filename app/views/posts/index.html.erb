@@ -8,96 +8,47 @@
   <div class="navbar-fixed">
     <ul id="dropdown1" class="dropdown-content">
       <li><a href="#!">New York</a></li>
-      <li><a href="#!">Oregon</a></li>
+      <li><a href="#!">Oregon</a></li
       <li><a href="#!">Yosemite</a></li>
       <li><a href="#!">Grand Canyon</a></li>
     </ul>
-    <nav class="teal lighten-3">
+    <nav class="grey">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
+        <a href="/" class="brand-logo"><%= image_tag "arrow.png", class: :"logo valign-wrapper" %></a>
         <ul class="left hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Travel<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="#">Lifestyle</a></li>
           <li><a href="#">Fashion</a></li>
           <li><a href="#">Posts</a></li>
-          <li><a href="/posts/new">New Post</a></li>
+          <% if current_user.admin %>
+            <li><a href="/posts/new">New Post</a></li>
+          <% end %>
         </ul>
         <ul class="valign-wrapper right hide-on-med-and-down">
-          <li><a href="/users/new">Register</a></li>
-          <li><a href="/sessions/new" id="login" href="">Login</a></li>
-          <li><a href="/sessions/destroy" id="login" href="">Logout</a></li>
-          <li><a href="#"><img class="icon" src="http://image.flaticon.com/icons/png/128/152/152817.png" /></a></li>
-          <li><a href="#"><img class="icon" src="http://image.flaticon.com/icons/png/128/37/37108.png" /></a></li>
-          <li><a href="#"><img class="icon" src="http://image.flaticon.com/icons/png/128/8/8800.png" /></a></li>
+          <!-- <li><a href="/users/new">Register</a></li> -->
+
+          <!-- <li><a href="/sessions/new" id="login" href="">Login</a></li> -->
+          <!-- <li><a href="/sessions/destroy" id="login" href="">Logout</a></li> -->
+          <li><a href="https://www.instagram.com/brewingadventure/" target="_blank"><img class="icon" src="http://image.flaticon.com/icons/png/128/37/37108.png" /></a></li>
+          <li><a href="https://www.facebook.com/brewingadventure/?fref=ts" target="_blank"><%= image_tag "fblogo.png", class: :"icon" %></a></li>
+          <li><a href="https://twitter.com/BrewinAdventure" target="_blank"><img class="icon" src="http://image.flaticon.com/icons/png/128/8/8800.png" /></a></li>
         </ul>
       </div>
     </nav>
   </div>
-<!-- 
-	<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Fashion <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Posts</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Trips <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Oregon</a></li>
-            <li><a href="#">New York</a></li>
-            <li><a href="#">Grand Canyon</a></li>
-            <li><a href="#">Yosemite</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-		<li><a href="#"><img class="icon" src="http://image.flaticon.com/icons/png/128/152/152817.png" /></a></li>
-        <li><a href="#"><img class="icon" src="http://image.flaticon.com/icons/png/128/37/37108.png" /></a></li>
-        <li><a href="#"><img class="icon" src="http://image.flaticon.com/icons/png/128/8/8800.png" /></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
   <div class="container-fluid">
     <div class="row">
-      <div class="text-italic teal lighten-5 jumbo">
-        <h1 id="blog-name">Brewing Adventure</h1>
+      <div class="text-italic grey lighten-2 jumbo">
+        <h2 id="blog-name">Brewing Adventure</h2>
+        <div><%= image_tag "arrow.png", class: :"arrow" %></div>
       </div>
     </div>
   </div>
 	
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-      <div class="col s3 center-align">
-        <h4>Who?</h4>
-        <%= image_tag "claushel.JPG", class: :"us-image" %>
-        <p>Claudia and Sheldon.</p>
-      </div>
 		  <div class="col s9 center-align">
 			<% @posts.each do |post| %>
 				<div id="post-box">
@@ -109,9 +60,11 @@
 				</div>
 			<% end %>	  	
 		  </div>
-		</div>
-		<div class="col-md-6">
-
+    <div class="col s2 center-align">
+      <%= image_tag "sidebarnu.jpg", class: :"us-image" %>
+        <p>Travel. Adventure Seekers. Hiking. Fashion. Coffee. Beer. Food.</p>
+        <p>Suggestions? Shoot us an email <strong>info@brewingadventure.com</strong></p>
+    </div>
 		</div>
 	</div>
 </body>

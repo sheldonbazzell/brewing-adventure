@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar-fixed">
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">New York</a></li>
+      <li><a href="#!">Oregon</a></li
+      <li><a href="#!">Yosemite</a></li>
+      <li><a href="#!">Grand Canyon</a></li>
+    </ul>
+    <nav class="grey">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo"><%= image_tag "arrow.png", class: :"logo valign-wrapper" %></a>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Travel<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Posts</a></li>
+          <% if current_user.admin %>
+            <li><a href="/posts/new">New Post</a></li>
+          <% end %>
+        </ul>
+        <ul class="valign-wrapper right hide-on-med-and-down">
+          <!-- <li><a href="/users/new">Register</a></li> -->
+
+          <!-- <li><a href="/sessions/new" id="login" href="">Login</a></li> -->
+          <!-- <li><a href="/sessions/destroy" id="login" href="">Logout</a></li> -->
+          <li><a href="https://www.instagram.com/brewingadventure/" target="_blank"><img class="icon" src="http://image.flaticon.com/icons/png/128/37/37108.png" /></a></li>
+          <li><a href="https://www.facebook.com/brewingadventure/?fref=ts" target="_blank"><%= image_tag "fblogo.png", class: :"icon" %></a></li>
+          <li><a href="https://twitter.com/BrewinAdventure" target="_blank"><img class="icon" src="http://image.flaticon.com/icons/png/128/8/8800.png" /></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<div class="container">
+	<div class="row about-row">
+		<div class="col s6 center-align">
+			<%= image_tag "clausheldon.JPG", class: :"us-image" %>
+			<p>Claudia and Sheldon.</p>
+		</div>
+		<div class="col s6 left-align">
+			<p class="top">
+				We are Sheldon and Claudia, husband and wife, best pals, sunset, and adventure lovers! Currently enjoying our mid-twenties in the Bay Area. It's true when they say that life is too short, so we took it upon ourselves to make the most out of everything. During the workweek, we find that there is very little time for fun and our spontanous lives. To break out of the routine, we decided to do something different every weekend, every day we have off, holidays... you name it. Whether we travel by plane, car, or water, we try to find a new place to brew adventure;) Join us on our journey as we continue to share a little bit about ourselves through this platform. We hope that you can too, make the most out of your days and perhaps even use our travel posts as inspiration! We are excited to see more, meet new people, and try delicious food.
+			</p>
+			<p>
+				Sheldon is a coffee and beer lover. When we travel, we try to hit all the good coffee shops and breweries - and well, document them as well. He loves extreme (in my opnion) sports, such as mountain biking, road biking, and rock climbing. He's the coolest kid ever, he built this website!! I call him 'cody.'
+			</p>
+			<p>
+				Claudia loves chasing the adventure, and capturing every moment along the way (my turn;)). She's full of ideas, and always has a place in mind for the weekend getaway. She has exquisite taste, that's why I let her direct this blog, after all. I feel like I learn something from her everyday, and with that in mind, keeping up with her updates will be worthwhile.
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
